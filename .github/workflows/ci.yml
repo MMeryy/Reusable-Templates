@@ -6,11 +6,11 @@ on:
         type: string
     secrets:
       DOCKER_TOKEN:
-        required: false
+        required: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploying to ${{ inputs.environment }}"
-      #- run: docker login -u user -p ${{ secrets.DOCKER_TOKEN }}
+      - run: docker login -u user -p ${{ secrets.DOCKER_TOKEN }}
