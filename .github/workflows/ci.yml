@@ -4,6 +4,10 @@ on:
       environment:
         required: true
         type: string
+      debug_mode:
+        type: boolean
+      port_number:
+        type: number
     secrets:
       DOCKER_TOKEN:
         required: true
