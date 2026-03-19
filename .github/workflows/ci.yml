@@ -16,5 +16,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Deploying to ${{ inputs.environment }}"
+      - run: |
+          echo "Deploying to ${{ inputs.environment }}"
+          echo "debug mode is ${{inputs.debug_mode}}"
+          echo "port is ${{inputs.port_number}}
+      
       #- run: docker login -u user -p ${{ secrets.DOCKER_TOKEN }}
