@@ -10,7 +10,7 @@ on:
         type: number
     secrets:
       DOCKER_TOKEN:
-        required: true
+        required: false
 
 jobs:
   deploy:
